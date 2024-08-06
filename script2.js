@@ -1,4 +1,3 @@
-/*
 const fetch = require("node-fetch");
 
 const getPeoplePromise = (fetch) => {
@@ -19,7 +18,7 @@ const getPeoplePromise = (fetch) => {
 
 const getPeople = async (fetch) => {
   const getRequest = await fetch("https://swapi.dev/api/people");
-  const data = getRequest.json();
+  const data = await getRequest.json();
   console.log(data);
   return {
     count: data.count,
@@ -27,13 +26,13 @@ const getPeople = async (fetch) => {
   };
 };
 
-getPeople(fetch);
+//getPeople(fetch);
 
 module.exports = {
   getPeoplePromise,
   getPeople,
 };
-*/
+
 /*
 //SECOND WAY OF WRITING THE FUNCTION USING PROMISE
 
@@ -69,7 +68,7 @@ const getPeople = async (fetch) => {
 };
 //getPeople(fetch);
 */
-
+/*
 const fetch = require("node-fetch");
 
 // Function using promises
@@ -100,9 +99,11 @@ const getPeople = async (fetch) => {
     throw error; // Re-throw error to handle it in the calling function
   }
 };
+console.log(getPeople(fetch));
 
 // Export both functions
 module.exports = {
   getPeoplePromise,
   getPeople,
 };
+*/
